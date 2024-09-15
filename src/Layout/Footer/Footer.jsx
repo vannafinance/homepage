@@ -1,0 +1,215 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const Footer = () => {
+  return (
+    <div className="custom-container w-full py-16 bg-white rounded-2xl flex-col justify-start items-start gap-10 inline-flex">
+      <div className="w-full flex flex-col md:flex-row justify-between items-start gap-10">
+        <div className="max-w-[433px] flex-col justify-start items-start gap-3.5 inline-flex">
+          <NavLink
+            to="/"
+            className="w-[140px] justify-start items-center gap-2 inline-flex"
+          >
+            <img
+              src="/assets/images/vannaLogo.svg"
+              className="w-[33.46px] object-contain"
+            />
+            <div className="text-[#181822] text-2xl font-extrabold uppercase">
+              Vanna
+            </div>
+          </NavLink>
+          <div className="pb-[0.51px] flex-col justify-start items-start flex">
+            <div className="text-[#76737b] text-base text-left font-medium leading-tight">
+              Aave.com provides information and resources about the
+              <br />
+              fundamentals of the decentralised non-custodial liquidity
+              <br />
+              protocol called the Aave Protocol, comprised of open-source
+              self-executing smart contracts that are deployed on various
+              permissionless public blockchains, such as Ethereum (the "Aave
+              Protocol" or the "Protocol").{" "}
+            </div>
+          </div>
+          <div className="justify-start items-center gap-5 inline-flex">
+            <NavLink
+              to="https://discord.gg/x3VHkx8A"
+              className="justify-start items-start flex"
+            >
+              <img
+                src="/assets/icons/footer/discordLogo.svg"
+                className="w-[20.89px] h-[22px] relative"
+              />
+            </NavLink>
+            <NavLink
+              to="https://x.com/vannafinance"
+              className="justify-start items-start flex"
+            >
+              <img
+                src="/assets/icons/footer/xLogo.svg"
+                className="w-[20.89px] h-[22px] relative"
+              />
+            </NavLink>
+            <NavLink to="/" className="justify-start items-start flex">
+              <img
+                src="/assets/icons/footer/telegramLogo.svg"
+                className="w-[20.89px] h-[22px] relative"
+              />
+            </NavLink>
+            <NavLink to="/" className="justify-start items-start flex">
+              <img
+                src="/assets/icons/footer/githubLogo.svg"
+                className="w-[20.89px] h-[22px] relative"
+              />
+            </NavLink>
+            <NavLink to="/" className="justify-start items-start flex">
+              <img
+                src="/assets/icons/footer/redditLogo.svg"
+                className="w-[20.89px] h-[22px] relative"
+              />
+            </NavLink>
+          </div>
+        </div>
+        <div className="flex-col justify-start items-start inline-flex">
+          <div className="flex flex-wrap justify-start items-start gap-[72px]">
+            <div className="flex-col justify-start items-start gap-4 inline-flex">
+              <div className="h-[17px] flex-col justify-start items-start flex">
+                <div className="text-[#181822] text-sm font-semibold leading-[16.80px] text-left">
+                  About
+                </div>
+              </div>
+              <div className="h-[130.20px] flex-col justify-start items-start gap-2.5 flex">
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Mission
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Blog
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      FAQs
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.61px] pb-[0.43px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Help & Support
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.61px] pb-[0.43px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Governance
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-col justify-start items-start gap-4 inline-flex">
+              <div className="h-[17px] flex-col justify-start items-start flex">
+                <div className="text-[#181822] text-sm font-semibold leading-[16.80px] text-left">
+                  Developers
+                </div>
+              </div>
+              <div className="h-[130.20px] flex-col justify-start items-start gap-2.5 flex">
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      User Docs
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Github
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Technical Paper
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <a href="https://docs.google.com/document/d/1I_qZde57FmqM00fg4qXjWSkStNIsGoYmvaHwKy1x2yE/edit?usp=sharing">
+                      <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                        Whitepaper
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.61px] pb-[0.43px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Bug Bounty
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-col justify-start items-start gap-4 inline-flex">
+              <div className="h-[17px] flex-col justify-start items-start flex">
+                <div className="text-[#181822] text-sm font-semibold leading-[16.80px] text-left">
+                  Company
+                </div>
+              </div>
+              <div className="h-[130.20px] flex-col justify-start items-start gap-2.5 flex">
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Privacy Policy
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Terms of Use
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.61px] pb-[0.43px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Brand
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-center items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Legal
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[18.04px] pt-[0.61px] pb-[0.43px] flex-col justify-start items-start flex">
+                  <div className="justify-start items-start inline-flex">
+                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                      Careers
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
