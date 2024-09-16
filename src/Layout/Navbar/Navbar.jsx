@@ -45,6 +45,8 @@ const Navbar = () => {
                   to="https://docs.vannafinance.xyz/vanna"
                   className="nav__link"
                   onClick={closeMenuOnMobile}
+                  target="_blank"
+                  // rel="noopener noreferrer"
                 >
                   Documentation
                 </NavLink>
@@ -63,7 +65,8 @@ const Navbar = () => {
                 <Button
                   containerClassName='w-full'
                   className="w-fit mx-auto gradient-button cursor-pointer text-sm leading-[16.8px] font-bold"
-                  redirectTo="/"
+                  redirectTo="https://app.vannafinance.xyz/"
+                  shouldOpenInNewTab
                 >
                   Launch VANNA
                 </Button>
@@ -73,7 +76,8 @@ const Navbar = () => {
 
           <Button
             className="nav__button w-fit mx-auto gradient-button cursor-pointer text-sm leading-[16.8px] font-bold"
-            redirectTo="/"
+            redirectTo="https://app.vannafinance.xyz/"
+            shouldOpenInNewTab
           >
             Launch VANNA
           </Button>

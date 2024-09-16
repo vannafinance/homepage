@@ -20,14 +20,9 @@ const Footer = () => {
           </NavLink>
           <div className="pb-[0.51px] flex-col justify-start items-start flex">
             <div className="text-[#76737b] text-base text-left font-medium leading-tight">
-              Aave.com provides information and resources about the
-              <br />
-              fundamentals of the decentralised non-custodial liquidity
-              <br />
-              protocol called the Aave Protocol, comprised of open-source
-              self-executing smart contracts that are deployed on various
-              permissionless public blockchains, such as Ethereum (the "Aave
-              Protocol" or the "Protocol").{" "}
+              Vanna's goal is to empower users with seamless crypto trading and
+              lending, offering advanced tools for maximizing growth and
+              control.
             </div>
           </div>
           <div className="justify-start items-center gap-5 inline-flex">
@@ -145,7 +140,7 @@ const Footer = () => {
                 </div>
                 <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
                   <div className="justify-start items-start inline-flex">
-                    <a href="https://docs.google.com/document/d/1I_qZde57FmqM00fg4qXjWSkStNIsGoYmvaHwKy1x2yE/edit?usp=sharing">
+                    <a href="https://docs.google.com/document/d/1I_qZde57FmqM00fg4qXjWSkStNIsGoYmvaHwKy1x2yE/edit?usp=sharing" target="_blank">
                       <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
                         Whitepaper
                       </div>

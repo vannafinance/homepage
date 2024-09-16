@@ -62,6 +62,7 @@ const Home = () => {
             <Button
               className="rounded-[8px] flex gap-2.5 bg-[#F2ECFE] p-3 px-4"
               redirectTo="https://discord.gg/x3VHkx8A"
+              shouldOpenInNewTab
             >
               <img src="/assets/icons/discordLogo.svg" />
               <p className="text-[16px] font-[600] text-primary">
@@ -70,7 +71,8 @@ const Home = () => {
             </Button>
             <Button
               className="gradient-button text-base font-semibold"
-              redirectTo="/"
+              redirectTo="https://app.vannafinance.xyz/"
+              shouldOpenInNewTab
             >
               Launch VANNA
             </Button>
