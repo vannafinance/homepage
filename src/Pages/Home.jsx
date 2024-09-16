@@ -77,7 +77,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <img src="/assets/images/heroImage.png" />
+          <img src="/assets/images/heroImage.webp" />
         </div>
       </section>
 
@@ -104,13 +104,13 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="order-1 md:order-2 flex justify-center items-center pb-5 md:pb-10">
-                  <img src="/assets/images/benefits/completeControl.png" />
+                  <img src="/assets/images/benefits/chart.webp" />
                 </div>
               </div>
               <div className="col-span-6 md:col-span-3 lg:col-span-2 border-style flex flex-col justify-between p-8 px-[27px]">
                 <div className="flex justify-center">
                   <img
-                    src="/assets/images/benefits/earning.png"
+                    src="/assets/images/benefits/pool.webp"
                     className="w-full max-h-[180px] md:max-h-fit object-contain pb-6"
                   />
                 </div>
@@ -128,7 +128,7 @@ const Home = () => {
               <div className="col-span-6 md:col-span-3 lg:col-span-2 border-style flex flex-col p-8 px-[27px]">
                 <div className="flex-1 flex items-start justify-center">
                   <img
-                    src="/assets/images/benefits/seamless.png"
+                    src="/assets/images/benefits/cardHolding.webp"
                     className="w-full max-h-[180px] md:max-h-fit object-contain"
                   />
                 </div>
@@ -153,7 +153,7 @@ const Home = () => {
                 </div>
                 <div className="order-1 md:order-2 flex justify-center pb-5 md:p-0 md:pt-5 lg:p-4">
                   <img
-                    src="/assets/images/benefits/leverage.png"
+                    src="/assets/images/benefits/leverage.webp"
                     className="max-h-[298px] w-full object-contain rounded-2xl"
                   />
                 </div>
@@ -213,7 +213,7 @@ const Home = () => {
             <div className="w-full py-[50px] md:py-[100px] flex justify-center items-center gap-10 flex-col lg:flex-row">
               <img
                 className="md:max-w-[650px] w-full object-contain shadow"
-                src="/assets/images/earn.png"
+                src="/assets/images/earn.webp"
               />
               <div className="flex-col justify-center items-start gap-8 inline-flex">
                 <div className="flex-col justify-start items-start gap-2.5 flex">
@@ -368,7 +368,7 @@ const Home = () => {
               </div>
               <img
                 className="order-1 lg:order-2 md:max-w-[650px] w-full object-contain rounded-[10px]"
-                src="/assets/images/traders/borrow.png"
+                src="/assets/images/traders/borrow.webp"
               />
             </div>
           </div>
@@ -389,7 +389,7 @@ const Home = () => {
             <div className="p-[9.23px] bg-white rounded-[18.47px] border border-white flex-col justify-start items-start gap-[9.23px] flex">
               <img
                 className="md:max-w-[900px] w-full object-contain"
-                src="/assets/images/dashboard.png"
+                src="/assets/images/dashboard.webp"
               />
             </div>
           </div>

@@ -12,7 +12,7 @@ const Accordion = () => {
         { detail: '2. Cross-Chain Access', description: 'Trade on multiple platforms with top liquidity.' }
       ],
       tryNowRedirectTo: '/',
-      imgSrc: '/assets/images/traders/futures.png',
+      imgSrc: '/assets/images/traders/futures.webp',
     },
     {
       title: 'Options',
@@ -21,7 +21,7 @@ const Accordion = () => {
         { detail: '2. Platform Choice', description: 'Trade across multiple options platforms with diverse assets.' }
       ],
       tryNowRedirectTo: '/',
-      imgSrc: '/assets/images/traders/option.png',
+      imgSrc: '/assets/images/traders/option.webp',
     },
     {
       title: 'Spot',
@@ -30,7 +30,7 @@ const Accordion = () => {
         { detail: '2. Cross-Chain Trading', description: 'Trade across multiple options platforms with diverse assets.' }
       ],
       tryNowRedirectTo: '/',
-      imgSrc: '/assets/images/traders/spot.png',
+      imgSrc: '/assets/images/traders/spot.webp',
     }
   ];
 
