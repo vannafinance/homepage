@@ -6,9 +6,9 @@ const Accordion = () => {
 
   const accordionData = [
     {
-      title: 'Futures',
+      title: 'Perpetual',
       content: [
-        { detail: '1. Advanced Hedge Mode', description: 'Protect futures trades on both sides.' },
+        { detail: '1. Advanced Hedge Mode', description: 'Protect perpetual trades on both sides.' },
         { detail: '2. Cross-Chain Access', description: 'Trade on multiple platforms with top liquidity.' }
       ],
       tryNowRedirectTo: '/',
