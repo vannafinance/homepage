@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Accordion from "../Components/Accordion";
 import Button from "../Components/Button";
-import Spline from "@splinetool/react-spline";
+
+const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 const Home = () => {
   const [selectedRole, setSelectedRole] = useState("lender"); // Default to lender
@@ -45,7 +46,15 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="flex justify-center items-center min-h-screen">
+            <div className="animate-spin rounded-full h-16 w-16 border-4 border-x-0 border-primary"></div>
+          </div>
+        </div>
+      }
+    >
       {/* Section 1 - Hero Section */}
       <section className="custom-container w-full pt-[60px] md:pt-[50px] flex-col justify-start items-center gap-[50px] inline-flex">
         <div className="max-w-[650px] flex-col justify-start items-center gap-5 flex">
@@ -80,8 +89,14 @@ const Home = () => {
           </div>
         </div>
         <div className="w-full">
-          <img src="/assets/images/heroImage.webp" className="block lg:hidden" />
-          <Spline scene="https://prod.spline.design/IBk2UFq-Ep8YlEIb/scene.splinecode" className="hidden lg:block" />
+          <img
+            src="/assets/images/heroImage.webp"
+            className="block lg:hidden"
+          />
+          <Spline
+            scene="https://prod.spline.design/IBk2UFq-Ep8YlEIb/scene.splinecode"
+            className="hidden lg:block"
+          />
         </div>
       </section>
 
@@ -427,7 +442,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-    </>
+    </Suspense>
   );
 };
 
