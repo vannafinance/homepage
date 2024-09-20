@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Accordion from "../Components/Accordion";
 import Button from "../Components/Button";
+import Spline from "@splinetool/react-spline";
 
 const Home = () => {
   const [selectedRole, setSelectedRole] = useState("lender"); // Default to lender
@@ -46,7 +47,7 @@ const Home = () => {
   return (
     <>
       {/* Section 1 - Hero Section */}
-      <section className="custom-container pt-[100px] md:pt-[140px] flex-col justify-start items-center gap-[79px] inline-flex">
+      <section className="custom-container w-full pt-[60px] md:pt-[50px] flex-col justify-start items-center gap-[50px] inline-flex">
         <div className="max-w-[650px] flex-col justify-start items-center gap-5 flex">
           <h1 className="text-[32px] md:text-[48px] font-bold md:leading-[60px] lg:leading-[70px] transition-all">
             Trade Big, Hedge Smart with
@@ -78,8 +79,9 @@ const Home = () => {
             </Button>
           </div>
         </div>
-        <div>
-          <img src="/assets/images/heroImage.webp" />
+        <div className="w-full">
+          <img src="/assets/images/heroImage.webp" className="block lg:hidden" />
+          <Spline scene="https://prod.spline.design/IBk2UFq-Ep8YlEIb/scene.splinecode" className="hidden lg:block" />
         </div>
       </section>
 
