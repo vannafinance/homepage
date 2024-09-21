@@ -246,7 +246,8 @@ const Home = () => {
                 </div>
                 <Button
                   className="px-6 py-3 rounded-md !border-l !border-r-4 !border-t !border-b-4 border-white-style justify-center items-center gap-2 inline-flex cursor-pointer"
-                  redirectTo="/"
+                  redirectTo="https://app.vannafinance.xyz/earn"
+                  shouldOpenInNewTab
                 >
                   <div className="gradient-text text-base font-semibold leading-tight">
                     Start Earning Now
@@ -378,7 +379,8 @@ const Home = () => {
                 </div>
                 <Button
                   className="px-6 py-3 rounded-md !border-l !border-r-4 !border-t !border-b-4 border-style justify-center items-center gap-2 inline-flex cursor-pointer"
-                  redirectTo="/"
+                  redirectTo="https://app.vannafinance.xyz/borrow"
+                  shouldOpenInNewTab
                 >
                   <div className="gradient-text text-base font-semibold leading-tight">
                     Borrow & Trade

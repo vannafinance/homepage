@@ -11,7 +11,7 @@ const Accordion = () => {
         { detail: '1. Advanced Hedge Mode', description: 'Protect perpetual trades on both sides.' },
         { detail: '2. Cross-Chain Access', description: 'Trade on multiple platforms with top liquidity.' }
       ],
-      tryNowRedirectTo: '/',
+      tryNowRedirectTo: 'https://app.vannafinance.xyz/trade/future',
       imgSrc: '/assets/images/traders/futures.webp',
     },
     {
@@ -20,7 +20,7 @@ const Accordion = () => {
         { detail: '1. Flexible Strategies', description: 'Customize your options trades for any market scenario.' },
         { detail: '2. Platform Choice', description: 'Trade across multiple options platforms with diverse assets.' }
       ],
-      tryNowRedirectTo: '/',
+      tryNowRedirectTo: 'https://app.vannafinance.xyz/trade/options',
       imgSrc: '/assets/images/traders/option.webp',
     },
     {
@@ -29,7 +29,7 @@ const Accordion = () => {
         { detail: '1. Instant Execution', description: 'Customize your options trades for any market scenario.' },
         { detail: '2. Cross-Chain Trading', description: 'Trade across multiple options platforms with diverse assets.' }
       ],
-      tryNowRedirectTo: '/',
+      tryNowRedirectTo: 'https://app.vannafinance.xyz/trade/spot',
       imgSrc: '/assets/images/traders/spot.webp',
     }
   ];
@@ -77,6 +77,7 @@ const Accordion = () => {
                   <Button
                     className="w-fit p-2.5 rounded-[10px] border-style justify-center items-center gap-2 inline-flex cursor-pointer"
                     redirectTo={item.tryNowRedirectTo}
+                    shouldOpenInNewTab
                   >
                     <div className="gradient-text text-base font-semibold leading-tight">Trade now</div>
                     <img src="/assets/icons/arrow.svg" className="w-5 h-5 relative" />
