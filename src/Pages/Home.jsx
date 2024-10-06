@@ -58,15 +58,14 @@ const Home = () => {
       {/* Section 1 - Hero Section */}
       <section className="custom-container w-full pt-[60px] md:pt-[50px] flex-col justify-start items-center gap-[50px] inline-flex">
         <div className="max-w-[650px] flex-col justify-start items-center gap-5 flex">
-          <h1 className="text-[32px] md:text-[48px] font-bold md:leading-[60px] lg:leading-[70px] transition-all">
-            Trade Big, Hedge Smart with
-            <span className="text-primary px-3">Minimal Collateral</span>&
-            Advance Strategies
+          <h1 className="text-3xl md:text-5xl font-bold md:leading-[60px] lg:leading-[70px] transition-all">
+            Power Up Your Wealth with
+            <span className="text-primary px-3">Lending </span>&
+            <span className="text-primary px-3"> Composable Leverage</span>
           </h1>
-          <p className="text-[14px] lg:text-[16px] text-neutral-500 mb-4">
-            Vanna provides superior APYs for lenders and empowers traders with
-            cross-market strategies using composable leverage and chain
-            abstraction
+          <p className="text-sm lg:text-base font-medium mb-4">
+            Vanna lets you lend, borrow, and trade with leverage over leverage —
+            all on one seamless platform.
           </p>
           <div className="flex flex-col md:flex-row gap-[26px] justify-center items-center content-center mt-3.5">
             <Button
@@ -75,9 +74,7 @@ const Home = () => {
               shouldOpenInNewTab
             >
               <img src="/assets/icons/discordLogo.svg" />
-              <p className="text-[16px] font-[600] text-primary">
-                Join Discord
-              </p>
+              <p className="text-base font-[600] text-primary">Join Discord</p>
             </Button>
             <Button
               className="gradient-button text-base font-semibold"
@@ -105,76 +102,75 @@ const Home = () => {
         <div className="custom-container mx-auto py-[100px] md:py-[140px] flex flex-col gap-20 items-center">
           <div className="max-w-[650px] h-[136px] flex flex-col gap-3 justify-center items-center">
             <h6 className="text-[#969B9C] text-base font-medium">
-              Introducing Vanna’s Benefit
+              Experience the Power of Vanna
             </h6>
-            <h3 className="text-white text-[32px] md:text-[40px] md:font-bold md:leading-[50px]">
+            <h3 className="text-white text-3xl md:text-[40px] md:font-bold md:leading-[50px]">
               Look Beyond Limits
             </h3>
           </div>
           <div className="flex flex-col gap-5">
-            <div className="grid grid-cols-6 gap-5 text-white">
-              <div className="col-span-6 md:col-span-3 lg:col-span-4 border-style p-8 px-[27px] flex flex-col gap-5 md:gap-[60px]">
-                <div className="order-2 md:order-1 text-start text-[24px]">
-                  <h3>Complete Control with the Greeks Dashboard</h3>
-                  <p className="text-[14px] font-[400] text-[#B5B3B3] mt-[10px]">
-                    Our Greek dashboard gives traders advanced insights into
-                    their positions, enabling you to make informed decisions
-                    while managing your risk efficiently.
-                  </p>
-                </div>
-                <div className="order-1 md:order-2 flex justify-center items-center pb-5 md:pb-10">
-                  <img src="/assets/images/benefits/chart.webp" />
-                </div>
-              </div>
-              <div className="col-span-6 md:col-span-3 lg:col-span-2 border-style flex flex-col justify-between p-8 px-[27px]">
+            <div className="grid grid-cols-6 lg:grid-cols-8 gap-5 text-white">
+              <div className="col-span-6 md:col-span-3 lg:col-span-3 border-style flex flex-col justify-between p-8 px-[27px]">
                 <div className="flex justify-center">
                   <img
-                    src="/assets/images/benefits/pool.webp"
+                    src="/assets/images/benefits/pool.svg"
                     className="w-full max-h-[180px] md:max-h-fit object-contain pb-6"
                   />
                 </div>
                 <div className="text-start text-[24px]">
-                  <h3>Optimized Earning Opportunities for Lenders</h3>
-                  <p className="text-[14px] font-[400] text-[#B5B3B3] mt-[10px]">
-                    Invest in a range of pools, each designed to offer
-                    competitive returns and diverse options to suit different
-                    risk appetites.
+                  <h3>Earn Superior Yields with Advanced Lending Pools</h3>
+                  <p className="text-sm font-[400] text-[#B5B3B3] mt-[10px]">
+                    Our innovative lending pools offer higher yields than
+                    traditional platforms, thanks to leveraged borrowing and
+                    shared liquidation fees.
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-cols-6 gap-5 text-white">
-              <div className="col-span-6 md:col-span-3 lg:col-span-2 border-style flex flex-col p-8 px-[27px]">
-                <div className="flex-1 flex items-start justify-center">
-                  <img
-                    src="/assets/images/benefits/cardHolding.webp"
-                    className="w-full max-h-[180px] md:max-h-fit object-contain"
-                  />
-                </div>
-                <div className="text-start text-[24px] mt-[32px]">
-                  <h3>Seamless Overview for Both Lenders & Traders</h3>
-                  <p className="text-[14px] font-[400] text-[#B5B3B3] mt-[10px]">
-                    Manage all your financial activities from a single overview
-                    page, giving you total visibility and control over your
-                    investments and trades.
-                  </p>
-                </div>
-              </div>
-              <div className="col-span-6 md:col-span-3 lg:col-span-4 border-style p-8 px-[27px] rounded-[24px] flex flex-col">
+              <div className="col-span-6 md:col-span-3 lg:col-span-5 border-style p-8 px-[27px] rounded-[24px] flex flex-col">
                 <div className="order-2 md:order-1 text-start text-[24px]">
                   <h3>Amplified Trading with Composable Leverage</h3>
-                  <p className="text-[14px] font-[400] text-[#B5B3B3] mt-[10px]">
-                    Borrow up to 10x leverage and use your margin balance to
-                    trade derivatives with up to 100x leverage. Vanna empowers
-                    you to expand your market positions and maximize returns
-                    across multiple trading products
+                  <p className="text-sm font-[400] text-[#B5B3B3] mt-[10px]">
+                    Maximize your trading potential with undercollateralized
+                    loans and allocate it across derivatives, spot, automated
+                    vaults, yield strategies, and money markets.
                   </p>
                 </div>
                 <div className="order-1 md:order-2 flex justify-center pb-5 md:p-0 md:pt-5 lg:p-4">
                   <img
-                    src="/assets/images/benefits/leverage.webp"
+                    src="/assets/images/benefits/leverage.svg"
                     className="max-h-[298px] w-full object-contain rounded-2xl"
                   />
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-6 lg:grid-cols-8 gap-5 text-white">
+              <div className="col-span-6 md:col-span-3 lg:col-span-5 border-style p-8 px-[27px] flex flex-col gap-5">
+                <div className="order-2 md:order-1 text-start text-[24px]">
+                  <h3>Complete Control with the Greeks Dashboard</h3>
+                  <p className="text-sm font-[400] text-[#B5B3B3] mt-[10px]">
+                    Gain advanced insights into your positions with our Greeks
+                    Dashboard, empowering you to make smarter, data-driven
+                    decisions and manage your risk with precision.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2 flex justify-center items-center ">
+                  <img src="/assets/images/benefits/chart.svg" />
+                </div>
+              </div>
+              <div className="col-span-6 md:col-span-3 lg:col-span-3 border-style flex flex-col p-8 px-[27px]">
+                <div className="flex items-start justify-center">
+                  <img
+                    src="/assets/images/benefits/borrow.svg"
+                    className="w-full max-h-[180px] md:max-h-fit object-contain"
+                  />
+                </div>
+                <div className="text-start text-[24px] mt-[32px]">
+                  <h3>Leverage Your Assets with LSTs and LRTs</h3>
+                  <p className="text-sm font-[400] text-[#B5B3B3] mt-[10px]">
+                    Unlock liquidity by using these assets as collateral to
+                    borrow additional margin, maximizing capital efficiency
+                    while keeping your assets actively in play.
+                  </p>
                 </div>
               </div>
             </div>
@@ -185,11 +181,11 @@ const Home = () => {
       <section className="relative h-fit w-full flex flex-col">
         {/* Section 3 - Choose your Role */}
         <section className="custom-container pt-[100px] flex flex-col gap-2 justify-center items-center">
-          <h3 className="text-[#181822] text-[36px] md:text-[48px] md:font-bold md:leading-[60px]">
+          <h3 className="text-[#181822] text-[36px] md:text-5xl md:font-bold md:leading-[60px]">
             Choose your Role
           </h3>
         </section>
-        <div className="w-fit sticky top-[60px] mx-auto z-[200] p-7">
+        <div className="w-fit sticky top-[60px] mx-auto z-[200] p-1">
           <div className="bg-[#181822] p-2.5 flex gap-2 justify-center items-center rounded-[14px]">
             <div
               className={`w-[120px] md:w-[220px] py-3 flex justify-center items-center border ${
@@ -232,7 +228,7 @@ const Home = () => {
             <div className="w-full py-[50px] md:py-[100px] flex justify-center items-center gap-10 flex-col lg:flex-row">
               <img
                 className="md:max-w-[650px] w-full object-contain shadow"
-                src="/assets/images/earn.webp"
+                src="/assets/images/earnDetails.svg"
               />
               <div className="flex-col justify-center items-start gap-8 inline-flex">
                 <div className="flex-col justify-start items-start gap-2.5 flex">
@@ -283,28 +279,6 @@ const Home = () => {
               <div className="justify-start items-center gap-4 inline-flex">
                 <div className="w-8 h-8 relative">
                   <img
-                    src="/assets/icons/supplyLiquidity.svg"
-                    className="w-8 h-8 left-0 top-0 absolute"
-                  />
-                </div>
-                <div className="flex-col justify-start items-start inline-flex">
-                  <div className="text-[#201c1c] text-base font-semibold leading-snug">
-                    Supply Liquidity
-                  </div>
-                </div>
-              </div>
-              <div className="flex-col justify-start items-start flex">
-                <div className="text-[#636060] text-base font-medium leading-tight text-left">
-                  Deposit your chosen asset into the pool. This instantly begins
-                  generating rewards, and you can track your earnings in real
-                  time.
-                </div>
-              </div>
-            </div>
-            <div className="p-5 bg-[#f2f2f2] rounded-2xl flex-col justify-start items-start gap-4 inline-flex">
-              <div className="justify-start items-center gap-4 inline-flex">
-                <div className="w-8 h-8 relative">
-                  <img
                     src="/assets/icons/explore.svg"
                     className="w-8 h-8 left-0 top-0 absolute"
                   />
@@ -323,13 +297,35 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            <div className="p-5 bg-[#f2f2f2] rounded-2xl flex-col justify-start items-start gap-4 inline-flex">
+              <div className="justify-start items-center gap-4 inline-flex">
+                <div className="w-8 h-8 relative">
+                  <img
+                    src="/assets/icons/supplyLiquidity.svg"
+                    className="w-8 h-8 left-0 top-0 absolute"
+                  />
+                </div>
+                <div className="flex-col justify-start items-start inline-flex">
+                  <div className="text-[#201c1c] text-base font-semibold leading-snug">
+                    Supply Liquidity
+                  </div>
+                </div>
+              </div>
+              <div className="flex-col justify-start items-start flex">
+                <div className="text-[#636060] text-base font-medium leading-tight text-left">
+                  Deposit your chosen asset into the pool. This instantly begins
+                  generating rewards, and you can track your earnings in real
+                  time.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Section 5 - Trader Section */}
 
         {/* <div className={`${selectedRole === "trader" ? "order-1" : "order-2"} w-full bg-bgColor flex flex-col`}> */}
-        <div id="trader" className="w-full bg-bgColor flex flex-col">
+        <div id="trader" className="w-full bg-bgColor flex flex-col pb-36">
           <div className="custom-container pt-[100px] md:pt-[140px] pb-[100px] flex-col justify-start items-start gap-20 inline-flex">
             <div className="flex flex-col lg:flex-row justify-start items-center gap-20">
               <div className="order-2 lg:order-1 flex-col justify-start items-start gap-8 inline-flex">
@@ -337,7 +333,7 @@ const Home = () => {
                   <div className="flex-col justify-start items-start gap-2.5 flex">
                     <div className="flex-col justify-start items-start gap-2.5 flex">
                       <div className="text-white text-[40px] font-bold text-left leading-[50px]">
-                        Multiply Your Potential with Leverage
+                        Multiply your Trading Power with Leveraged Borrowing
                       </div>
                       <div className="text-white text-xl font-normal text-left leading-normal">
                         Maximize trading limit with simple steps.
@@ -355,8 +351,9 @@ const Home = () => {
                           Deposit Collateral
                         </span>
                         <span className="text-[#b5b3b3] text-base font-medium text-left leading-tight">
-                          Securely deposit your crypto as collateral to start
-                          borrowing with leverage.
+                          Securely provide your LSTs, LRTs, or native assets to
+                          obtain an undercollateralized loan and boost your
+                          trading capacity.
                         </span>
                       </div>
                     </div>
@@ -367,11 +364,12 @@ const Home = () => {
                       />
                       <div className="w-full flex flex-col">
                         <span className="text-white text-base font-medium text-left leading-tight">
-                          Borrow with Leverage:
+                          Borrow with Leverage
                         </span>
                         <span className="text-[#b5b3b3] text-base font-medium text-left leading-tight">
-                          Choose your leverage amount and borrow against your
-                          collateral instantly.
+                          Choose your leverage up to 10x and borrow instantly
+                          against your collateral to increase your market
+                          exposure across derivatives, spot, and other markets.
                         </span>
                       </div>
                     </div>
@@ -387,10 +385,12 @@ const Home = () => {
                   </div>
                 </Button>
               </div>
-              <img
-                className="order-1 lg:order-2 md:max-w-[650px] w-full object-contain rounded-[10px]"
-                src="/assets/images/traders/borrow.webp"
-              />
+              <div className="order-1 lg:order-2 lg:w-full">
+                <img
+                  className="w-full object-contain rounded-[10px]"
+                  src="/assets/images/traders/borrow.png"
+                />
+              </div>
             </div>
           </div>
 
@@ -407,11 +407,81 @@ const Home = () => {
                 strategies and market conditions
               </div>
             </div>
-            <div className="p-[9.23px] bg-white rounded-[18.47px] border border-white flex-col justify-start items-start gap-[9.23px] flex">
+          </div>
+          <div className="px-10 flex-col xl:flex-row justify-start items-start gap-10 flex">
+            <div className="flex flex-1 flex-col sm:flex-row xl:flex-col gap-10 items-start self-stretch justify-center order-2 xl:order-1">
+              <div className="flex flex-1 p-5 items-start gap-4 rounded-2xl border border-white">
+                <img
+                  src="/assets/icons/cube.svg"
+                  className="w-4 h-4 relative"
+                />
+                <div className="w-full flex flex-col">
+                  <span className="text-white text-base font-medium text-left leading-tight">
+                    Multi-Leg Strategies & Payoff Graphs:
+                  </span>
+                  <span className="text-[#b5b3b3] text-base font-medium text-left leading-tight">
+                    Build complex multi-leg options strategies like straddles
+                    and spreads, visualized with real-time payoff graphs for
+                    better strategy management.
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-1 p-5 items-start gap-4 rounded-2xl border border-white">
+                <img
+                  src="/assets/icons/cube.svg"
+                  className="w-4 h-4 relative"
+                />
+                <div className="w-full flex flex-col">
+                  <span className="text-white text-base font-medium text-left leading-tight">
+                    Live Position Simulation:
+                  </span>
+                  <span className="text-[#b5b3b3] text-base font-medium text-left leading-tight">
+                    Monitor live simulations of your open options and futures
+                    positions, with real-time profit/loss and payoff graphs to
+                    dynamically adjust your strategies.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center self-stretch w-full xl:max-w-[650px] order-1">
               <img
-                className="md:max-w-[900px] w-full object-contain"
-                src="/assets/images/dashboard.webp"
+                className="w-full object-contain rounded-2xl"
+                src="/assets/images/dashboard.png"
               />
+            </div>
+            <div className="flex flex-1 flex-col sm:flex-row xl:flex-col gap-10 items-start self-stretch justify-center order-3 xl:order-1">
+              <div className="flex flex-1 p-5 items-start gap-4 rounded-2xl border border-white">
+                <img
+                  src="/assets/icons/cube.svg"
+                  className="w-4 h-4 relative"
+                />
+                <div className="w-full flex flex-col">
+                  <span className="text-white text-base font-medium text-left leading-tight">
+                    Real-Time Greeks Calculation:
+                  </span>
+                  <span className="text-[#b5b3b3] text-base font-medium text-left leading-tight">
+                    Get instant insights into key Greeks (Delta, Gamma, Theta,
+                    Vega, Rho) to understand how your positions react to market
+                    changes, volatility, and time decay.
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-1 p-5 items-start gap-4 rounded-2xl border border-white">
+                <img
+                  src="/assets/icons/cube.svg"
+                  className="w-4 h-4 relative"
+                />
+                <div className="w-full flex flex-col">
+                  <span className="text-white text-base font-medium text-left leading-tight">
+                    Live PnL Tracking:
+                  </span>
+                  <span className="text-[#b5b3b3] text-base font-medium text-left leading-tight">
+                    Track real-time profit and loss across individual options or
+                    entire strategies, refining your hedging approaches to
+                    maximize profitability.
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
