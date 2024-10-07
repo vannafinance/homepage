@@ -56,16 +56,19 @@ const Home = () => {
       }
     >
       {/* Section 1 - Hero Section */}
-      <section className="custom-container w-full pt-[60px] md:pt-[50px] flex-col justify-start items-center gap-[50px] inline-flex">
-        <div className="max-w-[650px] flex-col justify-start items-center gap-5 flex">
+      <section className="custom-container w-full pt-[60px] lg:pt-[140px] flex-col justify-start items-center gap-[80px] inline-flex">
+        <div className="max-w-[950px] flex-col justify-start items-center gap-5 flex">
           <h1 className="text-3xl md:text-5xl font-bold md:leading-[60px] lg:leading-[70px] transition-all">
-            Power Up Your Wealth with
-            <span className="text-primary px-3">Lending </span>&
-            <span className="text-primary px-3"> Composable Leverage</span>
+            Unlock <span className="text-primary px-3">Major Liquidity </span>
+            with LSTs and LRTs,{" "}
+            <span className="text-primary px-3">Trade Across Markets</span>, and{" "}
+            <span className="text-primary px-3">Hedge Smart</span> with Advanced
+            Strategies
           </h1>
-          <p className="text-sm lg:text-base font-medium mb-4">
-            Vanna lets you lend, borrow, and trade with leverage over leverage —
-            all on one seamless platform.
+          <p className="text-sm lg:text-base font-medium mb-4 text-[#76737B]">
+            Vanna provides superior APYs for lenders and empowers traders with
+            cross-market strategies using composable leverage and chain
+            abstraction.
           </p>
           <div className="flex flex-col md:flex-row gap-[26px] justify-center items-center content-center mt-3.5">
             <Button
