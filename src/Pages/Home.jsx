@@ -7,6 +7,69 @@ const Spline = React.lazy(() => import("@splinetool/react-spline"));
 const Home = () => {
   const [selectedRole, setSelectedRole] = useState("lender"); // Default to lender
 
+  const partners = [
+    {
+      name: "The Graph",
+      icon: "/images/partnerLogos/thegraph.svg",
+      link: "https://www.thegraph.com/",
+    },
+    {
+      name: "Derive",
+      icon: "/images/partnerLogos/derive.svg",
+      link: "https://www.derive.xyz/",
+    },
+    {
+      name: "Pivot",
+      icon: "/images/partnerLogos/pivot.svg",
+      link: "https://www.0xpivot.com/",
+    },
+    {
+      name: "1 Inch",
+      icon: "/images/partnerLogos/1inch.svg",
+      link: "https://www.1inch.io/",
+    },
+    {
+      name: "Optimism",
+      icon: "/images/partnerLogos/optimism.svg",
+      link: "https://www.optimism.io/",
+    },
+    {
+      name: "Base",
+      icon: "/images/partnerLogos/base.svg",
+      link: "https://www.base.org/",
+    },
+    {
+      name: "MUX",
+      icon: "/images/partnerLogos/mux.svg",
+      link: "https://www.mux.network/",
+    },
+    {
+      name: "GMX",
+      icon: "/images/partnerLogos/gmx.svg",
+      link: "https://www.gmx.io/",
+    },
+    {
+      name: "Premia",
+      icon: "/images/partnerLogos/premia.svg",
+      link: "https://www.premia.blue/ ",
+    },
+    {
+      name: "Arbitrum",
+      icon: "/images/partnerLogos/arbitrum.svg",
+      link: "https://www.arbitrum.io/",
+    },
+    {
+      name: "Perp",
+      icon: "/images/partnerLogos/perp.svg",
+      link: "https://www.perp.com/",
+    },
+    {
+      name: "Spectral Labs",
+      icon: "/images/partnerLogos/spectrallabs.svg",
+      link: "https://www.spectrallabs.xyz/",
+    },
+  ];
+
   // Function to scroll to the selected section
   const scrollToElement = (id) => {
     const element = document.getElementById(id);
@@ -56,16 +119,16 @@ const Home = () => {
       }
     >
       {/* Section 1 - Hero Section */}
-      <section className="custom-container w-full pt-[60px] lg:pt-[140px] flex-col justify-start items-center gap-[80px] inline-flex">
+      <section className="custom-container w-full pt-[60px] xl:pt-[140px] flex-col justify-start items-center gap-[80px] inline-flex">
         <div className="max-w-[950px] flex-col justify-start items-center gap-5 flex">
           <h1 className="text-3xl md:text-5xl font-bold md:leading-[60px] lg:leading-[70px] transition-all">
-            Unlock <span className="text-primary px-3">Major Liquidity </span>
+            Unlock <span className="text-primary">Major Liquidity </span>
             with LSTs and LRTs,{" "}
-            <span className="text-primary px-3">Trade Across Markets</span>, and{" "}
-            <span className="text-primary px-3">Hedge Smart</span> with Advanced
+            <span className="text-primary">Trade Across Markets</span>, and{" "}
+            <span className="text-primary">Hedge Smart</span> with Advanced
             Strategies
           </h1>
-          <p className="text-sm lg:text-base font-medium mb-4 text-[#76737B]">
+          <p className="text-sm lg:text-xl font-medium mb-4 text-[#76737B] px-2 lg:px-10">
             Vanna provides superior APYs for lenders and empowers traders with
             cross-market strategies using composable leverage and chain
             abstraction.
@@ -73,26 +136,21 @@ const Home = () => {
           <div className="flex flex-col md:flex-row gap-[26px] justify-center items-center content-center mt-3.5">
             <Button
               className="rounded-[8px] flex gap-2.5 bg-[#F2ECFE] p-3 px-4"
-              redirectTo="https://discord.gg/x3VHkx8A"
-              shouldOpenInNewTab
+              redirectTo="https://discord.gg/zwZGkNd3Fb"
             >
-              <img src="/assets/icons/discordLogo.svg" />
+              <img src="/icons/discordLogo.svg" />
               <p className="text-base font-[600] text-primary">Join Discord</p>
             </Button>
             <Button
               className="gradient-button text-base font-semibold"
-              redirectTo="https://app.vannafinance.xyz/"
-              shouldOpenInNewTab
+              redirectTo="https://app.vanna.finance/"
             >
-              Launch VANNA
+              Launch App
             </Button>
           </div>
         </div>
         <div className="w-full">
-          <img
-            src="/assets/images/heroImage.webp"
-            className="block lg:hidden"
-          />
+          <img src="/images/heroImage.webp" className="block lg:hidden" />
           <Spline
             scene="https://prod.spline.design/IBk2UFq-Ep8YlEIb/scene.splinecode"
             className="hidden lg:block"
@@ -113,10 +171,26 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-5">
             <div className="grid grid-cols-6 lg:grid-cols-8 gap-5 text-white">
+              <div className="col-span-6 md:col-span-3 lg:col-span-5 border-style p-8 px-[27px] rounded-[24px] flex flex-col">
+                <div className="order-2 md:order-1 text-start text-[24px]">
+                  <h3>Amplify Your Margin Balance with Composable Leverage</h3>
+                  <p className="text-sm font-[400] text-[#B5B3B3] mt-[10px]">
+                    Maximize your trading potential with undercollateralized
+                    loans and allocate it across derivatives, spot, automated
+                    vaults, yield strategies, and money markets.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2 flex justify-center pb-5 md:p-0 md:pt-5 lg:p-4">
+                  <img
+                    src="/images/benefits/leverage.webp"
+                    className="max-h-[298px] w-full object-contain rounded-2xl"
+                  />
+                </div>
+              </div>
               <div className="col-span-6 md:col-span-3 lg:col-span-3 border-style flex flex-col justify-between p-8 px-[27px]">
                 <div className="flex justify-center">
                   <img
-                    src="/assets/images/benefits/pool.svg"
+                    src="/images/benefits/pool.webp"
                     className="w-full max-h-[180px] md:max-h-fit object-contain pb-6"
                   />
                 </div>
@@ -129,41 +203,12 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-span-6 md:col-span-3 lg:col-span-5 border-style p-8 px-[27px] rounded-[24px] flex flex-col">
-                <div className="order-2 md:order-1 text-start text-[24px]">
-                  <h3>Amplified Trading with Composable Leverage</h3>
-                  <p className="text-sm font-[400] text-[#B5B3B3] mt-[10px]">
-                    Maximize your trading potential with undercollateralized
-                    loans and allocate it across derivatives, spot, automated
-                    vaults, yield strategies, and money markets.
-                  </p>
-                </div>
-                <div className="order-1 md:order-2 flex justify-center pb-5 md:p-0 md:pt-5 lg:p-4">
-                  <img
-                    src="/assets/images/benefits/leverage.svg"
-                    className="max-h-[298px] w-full object-contain rounded-2xl"
-                  />
-                </div>
-              </div>
             </div>
             <div className="grid grid-cols-6 lg:grid-cols-8 gap-5 text-white">
-              <div className="col-span-6 md:col-span-3 lg:col-span-5 border-style p-8 px-[27px] flex flex-col gap-5">
-                <div className="order-2 md:order-1 text-start text-[24px]">
-                  <h3>Complete Control with the Greeks Dashboard</h3>
-                  <p className="text-sm font-[400] text-[#B5B3B3] mt-[10px]">
-                    Gain advanced insights into your positions with our Greeks
-                    Dashboard, empowering you to make smarter, data-driven
-                    decisions and manage your risk with precision.
-                  </p>
-                </div>
-                <div className="order-1 md:order-2 flex justify-center items-center ">
-                  <img src="/assets/images/benefits/chart.svg" />
-                </div>
-              </div>
               <div className="col-span-6 md:col-span-3 lg:col-span-3 border-style flex flex-col p-8 px-[27px]">
                 <div className="flex items-start justify-center">
                   <img
-                    src="/assets/images/benefits/borrow.svg"
+                    src="/images/benefits/borrow.webp"
                     className="w-full max-h-[180px] md:max-h-fit object-contain"
                   />
                 </div>
@@ -174,6 +219,19 @@ const Home = () => {
                     borrow additional margin, maximizing capital efficiency
                     while keeping your assets actively in play.
                   </p>
+                </div>
+              </div>
+              <div className="col-span-6 md:col-span-3 lg:col-span-5 border-style p-8 px-[27px] flex flex-col gap-5">
+                <div className="order-2 md:order-1 text-start text-[24px]">
+                  <h3>Complete Control with the Greeks Dashboard</h3>
+                  <p className="text-sm font-[400] text-[#B5B3B3] mt-[10px]">
+                    Gain advanced insights into your positions with our Greeks
+                    Dashboard, empowering you to make smarter, data-driven
+                    decisions and manage your risk with precision.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2 flex justify-center items-center ">
+                  <img src="/images/benefits/chart.webp" />
                 </div>
               </div>
             </div>
@@ -230,8 +288,8 @@ const Home = () => {
           <div className="w-full">
             <div className="w-full py-[50px] md:py-[100px] flex justify-center items-center gap-10 flex-col lg:flex-row">
               <img
-                className="md:max-w-[650px] w-full object-contain shadow"
-                src="/assets/images/earnDetails.svg"
+                className="md:max-w-[650px] w-full object-contain shadow rounded-2xl"
+                src="/images/earnDetails.webp"
               />
               <div className="flex-col justify-center items-start gap-8 inline-flex">
                 <div className="flex-col justify-start items-start gap-2.5 flex">
@@ -245,8 +303,7 @@ const Home = () => {
                 </div>
                 <Button
                   className="px-6 py-3 rounded-md !border-l !border-r-4 !border-t !border-b-4 border-white-style justify-center items-center gap-2 inline-flex cursor-pointer"
-                  redirectTo="https://app.vannafinance.xyz/earn"
-                  shouldOpenInNewTab
+                  redirectTo="https://app.vanna.finance/earn"
                 >
                   <div className="gradient-text text-base font-semibold leading-tight">
                     Start Earning Now
@@ -260,7 +317,7 @@ const Home = () => {
               <div className="justify-start items-center gap-4 inline-flex">
                 <div className="w-8 h-8 relative">
                   <img
-                    src="/assets/icons/wallet.svg"
+                    src="/icons/wallet.svg"
                     className="w-8 h-8 left-0 top-0 absolute"
                   />
                 </div>
@@ -282,7 +339,7 @@ const Home = () => {
               <div className="justify-start items-center gap-4 inline-flex">
                 <div className="w-8 h-8 relative">
                   <img
-                    src="/assets/icons/explore.svg"
+                    src="/icons/explore.svg"
                     className="w-8 h-8 left-0 top-0 absolute"
                   />
                 </div>
@@ -304,7 +361,7 @@ const Home = () => {
               <div className="justify-start items-center gap-4 inline-flex">
                 <div className="w-8 h-8 relative">
                   <img
-                    src="/assets/icons/supplyLiquidity.svg"
+                    src="/icons/supplyLiquidity.svg"
                     className="w-8 h-8 left-0 top-0 absolute"
                   />
                 </div>
@@ -345,10 +402,7 @@ const Home = () => {
                   </div>
                   <div className="py-2 flex-col justify-start items-start gap-4 flex">
                     <div className="justify-start items-start gap-4 inline-flex">
-                      <img
-                        src="/assets/icons/cube.svg"
-                        className="w-4 h-4 relative"
-                      />
+                      <img src="/icons/cube.svg" className="w-4 h-4 relative" />
                       <div className="w-full flex flex-col">
                         <span className="text-white text-base font-medium text-left leading-tight">
                           Deposit Collateral
@@ -361,10 +415,7 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="justify-start items-start gap-4 inline-flex">
-                      <img
-                        src="/assets/icons/cube.svg"
-                        className="w-4 h-4 relative"
-                      />
+                      <img src="/icons/cube.svg" className="w-4 h-4 relative" />
                       <div className="w-full flex flex-col">
                         <span className="text-white text-base font-medium text-left leading-tight">
                           Borrow with Leverage
@@ -380,8 +431,7 @@ const Home = () => {
                 </div>
                 <Button
                   className="px-6 py-3 rounded-md !border-l !border-r-4 !border-t !border-b-4 border-style justify-center items-center gap-2 inline-flex cursor-pointer"
-                  redirectTo="https://app.vannafinance.xyz/borrow"
-                  shouldOpenInNewTab
+                  redirectTo="https://app.vanna.finance/borrow"
                 >
                   <div className="gradient-text text-base font-semibold leading-tight">
                     Borrow & Trade
@@ -391,7 +441,7 @@ const Home = () => {
               <div className="order-1 lg:order-2 lg:w-full">
                 <img
                   className="w-full object-contain rounded-[10px]"
-                  src="/assets/images/traders/borrow.png"
+                  src="/images/traders/borrow.webp"
                 />
               </div>
             </div>
@@ -414,10 +464,7 @@ const Home = () => {
           <div className="px-10 flex-col xl:flex-row justify-start items-start gap-10 flex">
             <div className="flex flex-1 flex-col sm:flex-row xl:flex-col gap-10 items-start self-stretch justify-center order-2 xl:order-1">
               <div className="flex flex-1 p-5 items-start gap-4 rounded-2xl border border-white">
-                <img
-                  src="/assets/icons/cube.svg"
-                  className="w-4 h-4 relative"
-                />
+                <img src="/icons/cube.svg" className="w-4 h-4 relative" />
                 <div className="w-full flex flex-col">
                   <span className="text-white text-base font-medium text-left leading-tight">
                     Multi-Leg Strategies & Payoff Graphs:
@@ -430,10 +477,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex flex-1 p-5 items-start gap-4 rounded-2xl border border-white">
-                <img
-                  src="/assets/icons/cube.svg"
-                  className="w-4 h-4 relative"
-                />
+                <img src="/icons/cube.svg" className="w-4 h-4 relative" />
                 <div className="w-full flex flex-col">
                   <span className="text-white text-base font-medium text-left leading-tight">
                     Live Position Simulation:
@@ -449,15 +493,12 @@ const Home = () => {
             <div className="flex flex-col justify-center self-stretch w-full xl:max-w-[650px] order-1">
               <img
                 className="w-full object-contain rounded-2xl"
-                src="/assets/images/dashboard.png"
+                src="/images/traders/dashboard.webp"
               />
             </div>
             <div className="flex flex-1 flex-col sm:flex-row xl:flex-col gap-10 items-start self-stretch justify-center order-3 xl:order-1">
               <div className="flex flex-1 p-5 items-start gap-4 rounded-2xl border border-white">
-                <img
-                  src="/assets/icons/cube.svg"
-                  className="w-4 h-4 relative"
-                />
+                <img src="/icons/cube.svg" className="w-4 h-4 relative" />
                 <div className="w-full flex flex-col">
                   <span className="text-white text-base font-medium text-left leading-tight">
                     Real-Time Greeks Calculation:
@@ -470,10 +511,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex flex-1 p-5 items-start gap-4 rounded-2xl border border-white">
-                <img
-                  src="/assets/icons/cube.svg"
-                  className="w-4 h-4 relative"
-                />
+                <img src="/icons/cube.svg" className="w-4 h-4 relative" />
                 <div className="w-full flex flex-col">
                   <span className="text-white text-base font-medium text-left leading-tight">
                     Live PnL Tracking:
@@ -504,15 +542,19 @@ const Home = () => {
           </div>
         </div>
         <div className="max-w-[680px] w-full flex justify-center items-center gap-10 flex-wrap">
-          {Array.from({ length: 12 }, (_, index) => (
+          {partners.map((item, index) => (
             <div
               key={index}
               className="w-20 h-20 p-[12.50px] justify-center items-center flex"
             >
-              <img
-                src={`/assets/images/partnerLogos/partnerLogo${index + 1}.svg`}
-                className="w-[55px] h-[55px] relative"
-              />
+              <a href={item.link} target="_blank">
+                <img
+                  src={item.icon}
+                  className="w-[55px] h-[55px] relative"
+                  alt={item.name}
+                  title={item.name}
+                />
+              </a>
             </div>
           ))}
         </div>

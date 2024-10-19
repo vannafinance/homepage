@@ -8,7 +8,7 @@
 
 **All Images**
 
---> Public/assets
+--> Public/
 
 **Main Code**
 

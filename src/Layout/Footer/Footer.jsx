@@ -9,9 +9,10 @@ const Footer = () => {
           <NavLink
             to="/"
             className="w-[140px] justify-start items-center gap-2 inline-flex"
+            target="_blank"
           >
             <img
-              src="/assets/images/vannaLogo.svg"
+              src="/images/vannaLogo.svg"
               className="w-[33.46px] object-contain"
             />
             <div className="text-[#181822] text-2xl font-extrabold uppercase">
@@ -27,41 +28,75 @@ const Footer = () => {
           </div>
           <div className="justify-start items-center gap-5 inline-flex">
             <NavLink
-              to="https://discord.gg/x3VHkx8A"
+              to="https://discord.gg/zwZGkNd3Fb"
               className="justify-start items-start flex"
+              target="_blank"
             >
               <img
-                src="/assets/icons/footer/discordLogo.svg"
+                src="/icons/discordLogo.svg"
                 className="w-[20.89px] h-[22px] relative"
               />
             </NavLink>
             <NavLink
               to="https://x.com/vannafinance"
               className="justify-start items-start flex"
+              target="_blank"
             >
               <img
-                src="/assets/icons/footer/xLogo.svg"
+                src="/icons/xLogo.svg"
                 className="w-[20.89px] h-[22px] relative"
               />
             </NavLink>
-            <NavLink to="/" className="justify-start items-start flex">
+            <NavLink
+              to="/https://t.me/vannafinance"
+              className="justify-start items-start flex"
+              target="_blank"
+            >
               <img
-                src="/assets/icons/footer/telegramLogo.svg"
+                src="/icons/telegramLogo.svg"
                 className="w-[20.89px] h-[22px] relative"
               />
             </NavLink>
-            <NavLink to="/" className="justify-start items-start flex">
+            <NavLink
+              to="https://github.com/vanna-protocol"
+              className="justify-start items-start flex"
+              target="_blank"
+            >
               <img
-                src="/assets/icons/footer/githubLogo.svg"
+                src="/icons/githubLogo.svg"
                 className="w-[20.89px] h-[22px] relative"
               />
             </NavLink>
-            <NavLink to="/" className="justify-start items-start flex">
+            {/* <NavLink
+              to="/"
+              className="justify-start items-start flex"
+              target="_blank"
+            >
               <img
-                src="/assets/icons/footer/redditLogo.svg"
+                src="/icons/youtubeLogo.svg"
                 className="w-[20.89px] h-[22px] relative"
               />
             </NavLink>
+            <NavLink
+              to="/"
+              className="justify-start items-start flex"
+              target="_blank"
+            >
+              <img
+                src="/icons/redditLogo.svg"
+                className="w-[20.89px] h-[22px] relative"
+              />
+            </NavLink>
+            <NavLink
+              to="/"
+              className="justify-start items-start flex"
+              target="_blank"
+            >
+              <img
+                src="/icons/farcasterLogo.svg"
+                className="w-[20.89px] h-[22px] relative"
+              />
+            </NavLink> */}
           </div>
         </div>
         <div className="flex-col justify-start items-start inline-flex">
@@ -119,16 +154,20 @@ const Footer = () => {
               <div className="h-[130.20px] flex-col justify-start items-start gap-2.5 flex">
                 <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
                   <div className="justify-start items-start inline-flex">
-                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
-                      User Docs
-                    </div>
+                    <a href="https://docs.vanna.finance" target="_blank">
+                      <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                        User Docs
+                      </div>
+                    </a>
                   </div>
                 </div>
                 <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
                   <div className="justify-start items-start inline-flex">
-                    <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
-                      Github
-                    </div>
+                    <a href="https://github.com/vanna-protocol" target="_blank">
+                      <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
+                        Github
+                      </div>
+                    </a>
                   </div>
                 </div>
                 <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
@@ -140,7 +179,10 @@ const Footer = () => {
                 </div>
                 <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
                   <div className="justify-start items-start inline-flex">
-                    <a href="https://docs.google.com/document/d/1I_qZde57FmqM00fg4qXjWSkStNIsGoYmvaHwKy1x2yE/edit?usp=sharing" target="_blank">
+                    <a
+                      href="https://docsend.com/v/4hxps/whitepaper"
+                      target="_blank"
+                    >
                       <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
                         Whitepaper
                       </div>

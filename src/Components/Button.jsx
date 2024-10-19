@@ -6,14 +6,12 @@ const Button = ({
   children,
   redirectTo = "/",
   containerClassName = "",
-  shouldOpenInNewTab = false,
 }) => {
   return (
     <NavLink
       to={redirectTo}
       className={`w-fit ${containerClassName}`}
-      target={shouldOpenInNewTab ? "_blank" : "_self"}
-      // rel={shouldOpenInNewTab ? "noopener noreferrer" : undefined}
+      target="_blank"
     >
       <button className={className}>{children}</button>
     </NavLink>

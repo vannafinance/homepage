@@ -17,8 +17,8 @@ const Accordion = () => {
           description: "Trade on multiple platforms with top liquidity.",
         },
       ],
-      tryNowRedirectTo: "https://app.vannafinance.xyz/trade/future",
-      imgSrc: "/assets/images/traders/futures.png",
+      tryNowRedirectTo: "https://app.vanna.finance/trade/future",
+      imgSrc: "/images/traders/futures.webp",
     },
     {
       title: "Options",
@@ -33,24 +33,25 @@ const Accordion = () => {
             "Trade across multiple options platforms with diverse assets.",
         },
       ],
-      tryNowRedirectTo: "https://app.vannafinance.xyz/trade/options",
-      imgSrc: "/assets/images/traders/option.png",
+      tryNowRedirectTo: "https://app.vanna.finance/trade/options",
+      imgSrc: "/images/traders/option.webp",
     },
     {
       title: "Spot",
       content: [
         {
           detail: "1. Instant Execution",
-          description: "Customize your options trades for any market scenario.",
+          description:
+            "Swap assets in real-time with immediate settlements, ensuring full ownership of your trades without delays.",
         },
         {
           detail: "2. Cross-Chain Trading",
           description:
-            "Trade across multiple options platforms with diverse assets.",
+            "Trade seamlessly across multiple chains and access the best liquidity pools for diverse assets, all from a single platform.",
         },
       ],
-      tryNowRedirectTo: "https://app.vannafinance.xyz/trade/spot",
-      imgSrc: "/assets/images/traders/spot.png",
+      tryNowRedirectTo: "https://app.vanna.finance/trade/spot",
+      imgSrc: "/images/traders/spot.webp",
     },
   ];
 
@@ -100,12 +101,9 @@ const Accordion = () => {
                     </div>
                   </div>
                   {openIndex === index ? (
-                    <img src="/assets/icons/upArrow.svg" className="w-8 h-8" />
+                    <img src="/icons/upArrow.svg" className="w-8 h-8" />
                   ) : (
-                    <img
-                      src="/assets/icons/downArrow.svg"
-                      className="w-8 h-8"
-                    />
+                    <img src="/icons/downArrow.svg" className="w-8 h-8" />
                   )}
                 </div>
                 {openIndex === index && (
@@ -128,13 +126,13 @@ const Accordion = () => {
                     <Button
                       className="w-fit p-2.5 rounded-[10px] border-style justify-center items-center gap-2 inline-flex cursor-pointer"
                       redirectTo={item.tryNowRedirectTo}
-                      shouldOpenInNewTab
+                      
                     >
                       <div className="gradient-text text-base font-semibold leading-tight">
                         Trade now
                       </div>
                       <img
-                        src="/assets/icons/arrow.svg"
+                        src="/icons/arrow.svg"
                         className="w-5 h-5 relative"
                       />
                     </Button>

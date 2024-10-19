@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu } from "react-icons/io5";
 import "./style.css";
 import Button from "../../Components/Button";
 
@@ -10,20 +9,32 @@ const Navbar = () => {
   const [showCommunityDropdown, setShowCommunityDropdown] = useState(false);
 
   const developersMenu = [
-    { name: "User Docs", link: "" },
-    { name: "Github", link: "" },
+    { name: "User Docs", link: "https://docs.vanna.finance" },
+    { name: "Github", link: "https://github.com/vanna-protocol" },
     { name: "Technical Docs", link: "" },
-    { name: "Whitepaper", link: "" },
+    { name: "Whitepaper", link: "https://docsend.com/v/4hxps/whitepaper" },
     { name: "Bug Bounty", link: "" },
   ];
 
   const communityMenu = [
-    { name: "Discord", link: "", icon: "/assets/icons/discordLogo.svg" },
-    { name: "Twitter", link: "", icon: "/assets/icons/xLogo.svg" },
-    { name: "Telegram", link: "", icon: "/assets/icons/telegramLogo.svg" },
-    { name: "YouTube", link: "", icon: "/assets/icons/youtubeLogo.svg" },
-    { name: "Reddit", link: "", icon: "/assets/icons/redditLogo.svg" },
-    { name: "Farcaster", link: "", icon: "/assets/icons/farcasterLogo.svg" },
+    {
+      name: "Discord",
+      link: "https://discord.gg/zwZGkNd3Fb",
+      icon: "/icons/discordLogo.svg",
+    },
+    {
+      name: "Twitter",
+      link: "https://x.com/vannafinance",
+      icon: "/icons/xLogo.svg",
+    },
+    {
+      name: "Telegram",
+      link: "https://t.me/vannafinance",
+      icon: "/icons/telegramLogo.svg",
+    },
+    // { name: "YouTube", link: "", icon: "/icons/youtubeLogo.svg" },
+    // { name: "Reddit", link: "", icon: "/icons/redditLogo.svg" },
+    // { name: "Farcaster", link: "", icon: "/icons/farcasterLogo.svg" },
   ];
 
   const toggleMenu = () => {
@@ -49,9 +60,9 @@ const Navbar = () => {
       <header className="header bg-white">
         <nav className="bg-white relative z-[100] w-full max-w-[1280px] mx-auto h-[65px] flex items-center justify-between md:px-10 px-[30px]">
           <div className="w-[134px] h-full flex items-center">
-            <NavLink to="/" className="nav__logo">
+            <NavLink to="/" className="nav__logo" target="_blank">
               <img
-                src="/assets/images/vannaLogo.svg"
+                src="/images/vannaLogo.svg"
                 className="w-[33.46px] object-contain"
               />
             </NavLink>
@@ -69,21 +80,11 @@ const Navbar = () => {
                   to="/"
                   className="nav__link"
                   onClick={closeMenuDropdown}
+                  target="_blank"
                 >
                   App
                 </NavLink>
               </li>
-              {/* <li className="nav__item">
-                <NavLink
-                  to="https://docs.vannafinance.xyz/vanna"
-                  className="nav__link"
-                  onClick={closeMenuDropdown}
-                  target="_blank"
-                  // rel="noopener noreferrer"
-                >
-                  Documentation
-                </NavLink>
-              </li> */}
               <div className="relative inline-block">
                 <li className="nav__item">
                   <NavLink
@@ -94,7 +95,7 @@ const Navbar = () => {
                   >
                     Developers
                     <img
-                      src="/assets/icons/downArrow.svg"
+                      src="/icons/downArrow.svg"
                       className="w-4 h-4 inline-block ml-1"
                     />
                   </NavLink>
@@ -107,6 +108,7 @@ const Navbar = () => {
                         key={"dev-" + index}
                         to={item.link}
                         onClick={closeMenuDropdown}
+                        target="_blank"
                       >
                         {item.name}
                       </NavLink>
@@ -119,6 +121,7 @@ const Navbar = () => {
                   to="/"
                   className="nav__link"
                   onClick={closeMenuDropdown}
+                  target="_blank"
                 >
                   Governance
                 </NavLink>
@@ -133,7 +136,7 @@ const Navbar = () => {
                   >
                     Community
                     <img
-                      src="/assets/icons/downArrow.svg"
+                      src="/icons/downArrow.svg"
                       className="w-4 h-4 inline-block ml-1"
                     />
                   </NavLink>
@@ -146,6 +149,7 @@ const Navbar = () => {
                         key={"com-" + index}
                         to={item.link}
                         onClick={closeMenuDropdown}
+                        target="_blank"
                       >
                         <img
                           src={item.icon}
@@ -162,10 +166,9 @@ const Navbar = () => {
                 <Button
                   containerClassName="w-full"
                   className="w-fit mx-auto gradient-button cursor-pointer text-sm leading-[16.8px] font-bold"
-                  redirectTo="https://app.vannafinance.xyz/"
-                  shouldOpenInNewTab
+                  redirectTo="https://app.vanna.finance/"
                 >
-                  Launch VANNA
+                  Launch App
                 </Button>
               )}
             </ul>
@@ -173,18 +176,13 @@ const Navbar = () => {
 
           <Button
             className="nav__button w-fit mx-auto gradient-button cursor-pointer text-sm leading-[16.8px] font-bold"
-            redirectTo="https://app.vannafinance.xyz/"
-            shouldOpenInNewTab
+            redirectTo="https://app.vanna.finance/"
           >
-            Launch VANNA
+            Launch App
           </Button>
 
           <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
-            <img
-              src={
-                showMenu ? "/assets/icons/close.svg" : "/assets/icons/menu.svg"
-              }
-            />
+            <img src={showMenu ? "/icons/close.svg" : "/icons/menu.svg"} />
           </div>
         </nav>
       </header>
