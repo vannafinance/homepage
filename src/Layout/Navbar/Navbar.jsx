@@ -9,7 +9,7 @@ const Navbar = () => {
   const [showCommunityDropdown, setShowCommunityDropdown] = useState(false);
 
   const developersMenu = [
-    { name: "User Docs", link: "https://docs.vanna.finance" },
+    { name: "User Docs", link: "https://docs.vanna.finance/docs" },
     { name: "Github", link: "https://github.com/vanna-protocol" },
     { name: "Technical Docs", link: "" },
     { name: "Whitepaper", link: "https://docsend.com/v/4hxps/whitepaper" },
