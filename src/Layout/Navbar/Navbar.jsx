@@ -7,6 +7,12 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showDevelopersDropdown, setShowDevelopersDropdown] = useState(false);
   const [showCommunityDropdown, setShowCommunityDropdown] = useState(false);
+  const [showAppDropdown, setShowAppDropdown] = useState(false);
+
+  const appMenu = [
+    { name: "Launch App", link: "https://app.vanna.finance/" },
+    { name: "Testnet", link: "https://testnet.vanna.finance/" },
+  ];
 
   const developersMenu = [
     { name: "User Docs", link: "https://docs.vanna.finance/docs" },
@@ -54,6 +60,9 @@ const Navbar = () => {
     if (showCommunityDropdown) {
       setShowCommunityDropdown(false);
     }
+    if (showAppDropdown) {
+      setShowAppDropdown(false);
+    }
   };
   return (
     <>
@@ -75,16 +84,35 @@ const Navbar = () => {
             id="nav-menu"
           >
             <ul className="nav__list">
-              <li className="nav__item">
-                <NavLink
-                  to="/"
-                  className="nav__link"
-                  onClick={closeMenuDropdown}
-                  target="_blank"
-                >
-                  App
-                </NavLink>
-              </li>
+              <div className="relative inline-block">
+                <li className="nav__item">
+                  <NavLink
+                    className="nav__link"
+                    onClick={() => setShowAppDropdown(!showAppDropdown)}
+                  >
+                    App
+                    <img
+                      src="/icons/downArrow.svg"
+                      className="w-4 h-4 inline-block ml-1"
+                    />
+                  </NavLink>
+                </li>
+                {showAppDropdown && (
+                  <div className="bg-white origin-top-right absolute -left-4 w-40 mt-0.5 rounded-md shadow-xl ring-1 ring-black ring-opacity-5 top-10 z-50 transition-all duration-300 p-1.5">
+                    {appMenu.map((item, index) => (
+                      <NavLink
+                        className="flex items-center p-3 text-sm font-medium text-[#181822] w-full rounded-lg hover:bg-[#f4f4ff]"
+                        key={"dev-" + index}
+                        to={item.link}
+                        onClick={closeMenuDropdown}
+                        target="_blank"
+                      >
+                        {item.name}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
+              </div>
               <div className="relative inline-block">
                 <li className="nav__item">
                   <NavLink
