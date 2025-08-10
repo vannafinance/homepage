@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Layout/Navbar/Navbar";
 import Home from "./Pages/Home";
 import Footer from "./Layout/Footer/Footer";
+import JoinWaitlist from "./Pages/waitlist";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/join-waitlist" element={<JoinWaitlist />} />
         </Routes>
       </main>
       <Footer />

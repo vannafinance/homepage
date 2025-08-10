@@ -143,9 +143,9 @@ const Home = () => {
             </Button>
             <Button
               className="gradient-button text-base font-semibold"
-              redirectTo="https://app.vanna.finance/"
+              redirectTo="/join-waitlist"
             >
-              Launch App
+              Join Waitlist
             </Button>
           </div>
         </div>

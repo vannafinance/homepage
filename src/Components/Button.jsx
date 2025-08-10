@@ -6,12 +6,13 @@ const Button = ({
   children,
   redirectTo = "/",
   containerClassName = "",
+  target = "_blank"
 }) => {
   return (
     <NavLink
       to={redirectTo}
       className={`w-fit ${containerClassName}`}
-      target="_blank"
+      target={target}
     >
       <button className={className}>{children}</button>
     </NavLink>

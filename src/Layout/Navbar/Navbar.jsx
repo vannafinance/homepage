@@ -194,9 +194,9 @@ const Navbar = () => {
                 <Button
                   containerClassName="w-full"
                   className="w-fit mx-auto gradient-button cursor-pointer text-sm leading-[16.8px] font-bold"
-                  redirectTo="https://app.vanna.finance/"
+                  redirectTo="/join-waitlist"
                 >
-                  Launch App
+                   Join Waitlist
                 </Button>
               )}
             </ul>
@@ -204,9 +204,9 @@ const Navbar = () => {
 
           <Button
             className="nav__button w-fit mx-auto gradient-button cursor-pointer text-sm leading-[16.8px] font-bold"
-            redirectTo="https://app.vanna.finance/"
+            redirectTo="/join-waitlist"
           >
-            Launch App
+            Join Waitlist
           </Button>
 
           <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
