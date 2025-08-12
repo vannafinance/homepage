@@ -5,6 +5,7 @@ import React, { useMemo, useState } from "react";
 import { isLikelyEvmAddress } from "../lib/helper";
 import { joinWaitlist } from "../api";
 import { useNavigate } from "react-router-dom";
+import Notification from "../Components/notification";
 
 const initialFormData = {
   evmAddress: "",
@@ -17,7 +18,9 @@ const initialFormData = {
 export default function JoinWaitlist() {
   const [formData, setFormData] = useState(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [notifications, setNotifications] = useState([]);
   const navigate = useNavigate()
+
   const isEvmValid = useMemo(
     () =>
       formData.evmAddress.length === 0
@@ -25,6 +28,17 @@ export default function JoinWaitlist() {
         : isLikelyEvmAddress(formData.evmAddress),
     [formData.evmAddress]
   );
+
+  const removeNotification = (id) => {
+    setNotifications((prev) =>
+      prev.filter((notification) => notification.id !== id)
+    );
+  };
+
+  const addNotification = (type, message) => {
+    const id = Date.now();
+    setNotifications((prev) => [...prev, { id, type, message }]);
+  };
 
   // Light geometric line pattern using layered repeating linear-gradients.
   // Top-half visibility with a soft fade to mimic the design reference.
@@ -53,24 +67,21 @@ export default function JoinWaitlist() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!isEvmValid) return;
+  
     setIsSubmitting(true);
     try {
-
-      const [data,err] = await joinWaitlist(formData)
-      if(err){
-        throw err
-      }
-
-      if(data){
-        alert("Thanks! You have been added to the waitlist.");
-        navigate("/")
-      }}
-      catch (err){
-        alert(err.message)
-      } finally {
-        setIsSubmitting(false);
-      }
-    } 
+      const data = await joinWaitlist(formData);
+      addNotification("success","Thanks! You have been added to the waitlist.");
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+     
+    } catch (err) {
+      addNotification("error",err.message);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="relative w-full">
@@ -173,6 +184,19 @@ export default function JoinWaitlist() {
           </div>
         </div>
       </div>
+      <div className="fixed bottom-5 left-5 w-72">
+    {notifications.map(({ id, type, message }) => (
+      <Notification
+        key={id}
+        type={type}
+        message={message}
+        onClose={() => removeNotification(id)}
+        duration={3000}
+      />
+    ))}
+  </div>
     </section>
+    
+  
   );
 }
