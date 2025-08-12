@@ -4,34 +4,8 @@ import Button from "../Components/Button";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
-class SplineErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error) {
-    if (typeof this.props.onError === "function") {
-      this.props.onError(error);
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || null;
-    }
-    return this.props.children;
-  }
-}
-
 const Home = () => {
   const [selectedRole, setSelectedRole] = useState("lender"); // Default to lender
-  const [isWebglSupported, setIsWebglSupported] = useState(false);
-  const [splineFailed, setSplineFailed] = useState(false);
 
   const partners = [
     {
@@ -106,21 +80,6 @@ const Home = () => {
 
   // Function to track the section in view
   useEffect(() => {
-    const isWebGLAvailable = () => {
-      try {
-        const canvas = document.createElement("canvas");
-        const gl =
-          canvas.getContext("webgl2") ||
-          canvas.getContext("webgl") ||
-          canvas.getContext("experimental-webgl");
-        return !!gl;
-      } catch (err) {
-        return false;
-      }
-    };
-
-    setIsWebglSupported(isWebGLAvailable());
-
     const handleScroll = () => {
       const lenderSection = document.getElementById("lender");
       const traderSection = document.getElementById("trader");
@@ -192,16 +151,10 @@ const Home = () => {
         </div>
         <div className="w-full">
           <img src="/images/heroImage.webp" className="block lg:hidden" />
-          {isWebglSupported && !splineFailed ? (
-            <SplineErrorBoundary onError={() => setSplineFailed(true)}>
-              <Spline
-                scene="https://prod.spline.design/IBk2UFq-Ep8YlEIb/scene.splinecode"
-                className="hidden lg:block"
-              />
-            </SplineErrorBoundary>
-          ) : (
-            <img src="/images/heroImage.webp" className="hidden lg:block" />
-          )}
+          <Spline
+            scene="https://prod.spline.design/IBk2UFq-Ep8YlEIb/scene.splinecode"
+            className="hidden lg:block"
+          />
         </div>
       </section>
 
