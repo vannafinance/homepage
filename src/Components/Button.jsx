@@ -6,13 +6,15 @@ const Button = ({
   children,
   redirectTo = "/",
   containerClassName = "",
-  target = "_blank"
+  target = "_blank",
 }) => {
+  const isInternal = redirectTo.startsWith("/") && !redirectTo.startsWith("//");
+  const computedTarget = isInternal ? "_self" : target;
   return (
     <NavLink
       to={redirectTo}
       className={`w-fit ${containerClassName}`}
-      target={target}
+      target={computedTarget}
     >
       <button className={className}>{children}</button>
     </NavLink>
