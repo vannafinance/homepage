@@ -211,7 +211,6 @@ export default function JoinWaitlist() {
                 />
 
                 <input
-                  required
                   name="discordHandle"
                   value={formData.discordHandle}
                   onChange={handleChange}
@@ -220,7 +219,6 @@ export default function JoinWaitlist() {
                 />
 
                 <input
-                  required
                   name="xHandle"
                   value={formData.xHandle}
                   onChange={handleChange}
@@ -229,7 +227,6 @@ export default function JoinWaitlist() {
                 />
 
                 <input
-                  required
                   name="telegramHandle"
                   value={formData.telegramHandle}
                   onChange={handleChange}
@@ -238,7 +235,6 @@ export default function JoinWaitlist() {
                 />
 
                 <textarea
-                  required
                   name="feedback"
                   value={formData.feedback}
                   onChange={handleChange}
