@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 import { isLikelyEvmAddress } from "../lib/helper";
-import { joinWaitlist } from "../api";
 import { useNavigate } from "react-router-dom";
 import Notification from "../Components/notification";
+import { supabase } from "../lib/supabase";
 
 const initialFormData = {
   evmAddress: "",
@@ -19,7 +19,10 @@ export default function JoinWaitlist() {
   const [formData, setFormData] = useState(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [notifications, setNotifications] = useState([]);
-  const navigate = useNavigate()
+  const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const navigate = useNavigate();
 
   const isEvmValid = useMemo(
     () =>
@@ -64,20 +67,87 @@ export default function JoinWaitlist() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const authenticateUser = async () => {
+    try {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (user) {
+        setUser(user);
+        setIsAuthenticated(true);
+        return true;
+      }
+
+      const email = import.meta.env.VITE_SUPABASE_USER_EMAIL;
+      const password = import.meta.env.VITE_SUPABASE_USER_PASSWORD;
+      if (!email || !password) {
+        addNotification(
+          "error",
+          "Something Went Wrong , Try Again Later"
+        );
+        return false;
+      }
+
+      const { data, error: signInError } =
+        await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+
+      if (signInError) {
+        throw signInError;
+      }
+
+      if (data?.user) {
+        setUser(data.user);
+        setIsAuthenticated(true);
+        return true;
+      }
+
+      return false;
+    } catch (err) {
+      addNotification("error", "Something Went Wrong , Try Again Later");
+      return false;
+    }
+  };
+
+  useEffect(() => {
+    authenticateUser();
+  }, []);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!isEvmValid) return;
-  
+
+    console.log(isAuthenticated,user)
+
     setIsSubmitting(true);
     try {
-      const data = await joinWaitlist(formData);
-      addNotification("success","Thanks! You have been added to the waitlist.");
-      setTimeout(() => {
-        navigate("/");
-      }, 2000);
-     
+      if (!isAuthenticated) {
+        const ok = await authenticateUser();
+        if (!ok) {
+          throw new Error("Supabase user is not authenticated");
+        }
+      }
+      console.log(isAuthenticated,user)
+      const { data, error } = await supabase
+        .from("waitlist")
+        .insert([formData])
+        .select();
+
+      if (data && data.length > 0) {
+        navigate("/thank-you");
+      }
+
+      if (error) {
+        throw error;
+      }
     } catch (err) {
-      addNotification("error",err.message);
+      if (err?.code == "23505") {
+        addNotification("error", "You're Already in Waitlist");
+      } else {
+        addNotification("error", "Something Went Wrong, Try Again Later");
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -128,6 +198,7 @@ export default function JoinWaitlist() {
 
               <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                 <input
+                  required
                   name="evmAddress"
                   value={formData.evmAddress}
                   onChange={handleChange}
@@ -140,6 +211,7 @@ export default function JoinWaitlist() {
                 />
 
                 <input
+                  required
                   name="discordHandle"
                   value={formData.discordHandle}
                   onChange={handleChange}
@@ -148,6 +220,7 @@ export default function JoinWaitlist() {
                 />
 
                 <input
+                  required
                   name="xHandle"
                   value={formData.xHandle}
                   onChange={handleChange}
@@ -156,6 +229,7 @@ export default function JoinWaitlist() {
                 />
 
                 <input
+                  required
                   name="telegramHandle"
                   value={formData.telegramHandle}
                   onChange={handleChange}
@@ -164,6 +238,7 @@ export default function JoinWaitlist() {
                 />
 
                 <textarea
+                  required
                   name="feedback"
                   value={formData.feedback}
                   onChange={handleChange}
@@ -185,18 +260,16 @@ export default function JoinWaitlist() {
         </div>
       </div>
       <div className="fixed bottom-5 left-5 w-72">
-    {notifications.map(({ id, type, message }) => (
-      <Notification
-        key={id}
-        type={type}
-        message={message}
-        onClose={() => removeNotification(id)}
-        duration={3000}
-      />
-    ))}
-  </div>
+        {notifications.map(({ id, type, message }) => (
+          <Notification
+            key={id}
+            type={type}
+            message={message}
+            onClose={() => removeNotification(id)}
+            duration={3000}
+          />
+        ))}
+      </div>
     </section>
-    
-  
   );
 }
