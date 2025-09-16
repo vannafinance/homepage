@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const developersMenu = [
     { name: "User Docs", link: "https://docs.vanna.finance/docs" },
-    { name: "Github", link: "https://github.com/vanna-protocol" },
+    { name: "Github", link: "https://github.com/vannafinance" },
     { name: "Technical Docs", link: "" },
     { name: "Whitepaper", link: "https://docsend.com/v/4hxps/whitepaper" },
     { name: "Bug Bounty", link: "" },
@@ -25,17 +25,17 @@ const Navbar = () => {
   const communityMenu = [
     {
       name: "Discord",
-      link: "https://discord.gg/zwZGkNd3Fb",
+      link: "https://discord.gg/MmK9rsWdzS",
       icon: "/icons/discordLogo.svg",
     },
     {
       name: "Twitter",
-      link: "https://x.com/vannafinance",
+      link: "https://x.com/vannaprotocol",
       icon: "/icons/xLogo.svg",
     },
     {
       name: "Telegram",
-      link: "https://t.me/vannafinance",
+      link: "https://t.me/vannaprotocolann",
       icon: "/icons/telegramLogo.svg",
     },
     // { name: "YouTube", link: "", icon: "/icons/youtubeLogo.svg" },

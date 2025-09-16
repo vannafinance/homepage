@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           <div className="justify-start items-center gap-5 inline-flex">
             <NavLink
-              to="https://discord.gg/zwZGkNd3Fb"
+              to="https://discord.gg/MmK9rsWdzS"
               className="justify-start items-start flex"
               target="_blank"
             >
@@ -38,7 +38,7 @@ const Footer = () => {
               />
             </NavLink>
             <NavLink
-              to="https://x.com/vannafinance"
+              to="https://x.com/vannaprotocol"
               className="justify-start items-start flex"
               target="_blank"
             >
@@ -48,7 +48,7 @@ const Footer = () => {
               />
             </NavLink>
             <NavLink
-              to="/https://t.me/vannafinance"
+              to="https://t.me/vannaprotocolann"
               className="justify-start items-start flex"
               target="_blank"
             >
@@ -58,7 +58,7 @@ const Footer = () => {
               />
             </NavLink>
             <NavLink
-              to="https://github.com/vanna-protocol"
+              to="https://github.com/vannafinance"
               className="justify-start items-start flex"
               target="_blank"
             >
