@@ -17,9 +17,9 @@ const Navbar = () => {
   const developersMenu = [
     { name: "User Docs", link: "https://docs.vanna.finance/docs" },
     // { name: "Github", link: "https://github.com/vannafinance" },
-    { name: "Technical Docs", link: "https://docs.vanna.finance/tech" },
+    // { name: "Technical Docs", link: "https://docs.vanna.finance/tech" },
     { name: "Whitepaper", link: "https://docsend.com/v/4hxps/whitepaper" },
-    { name: "Bug Bounty", link: "" },
+    // { name: "Bug Bounty", link: "" },
   ];
 
   const communityMenu = [

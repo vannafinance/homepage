@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
         <div className="flex-col justify-start items-start inline-flex">
           <div className="flex flex-wrap justify-start items-start gap-[72px]">
-            <div className="flex-col justify-start items-start gap-4 inline-flex">
+            {/* <div className="flex-col justify-start items-start gap-4 inline-flex">
               <div className="h-[17px] flex-col justify-start items-start flex">
                 <div className="text-[#181822] text-sm font-semibold leading-[16.80px] text-left">
                   About
@@ -136,7 +136,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="flex-col justify-start items-start gap-4 inline-flex">
               <div className="h-[17px] flex-col justify-start items-start flex">
                 <div className="text-[#181822] text-sm font-semibold leading-[16.80px] text-left">
@@ -162,7 +162,7 @@ const Footer = () => {
                     </a>
                   </div>
                 </div> */}
-                <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
+                {/* <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
                 <div className="justify-start items-start inline-flex">
                     <a
                       href="https://docs.vanna.finance/tech"
@@ -173,7 +173,7 @@ const Footer = () => {
                       </div>
                     </a>
                   </div>
-                </div>
+                </div> */}
                 <div className="h-[18.04px] pt-[0.60px] pb-[0.44px] flex-col justify-start items-start flex">
                   <div className="justify-start items-start inline-flex">
                     <a
@@ -186,16 +186,16 @@ const Footer = () => {
                     </a>
                   </div>
                 </div>
-                <div className="h-[18.04px] pt-[0.61px] pb-[0.43px] flex-col justify-start items-start flex">
+                {/* <div className="h-[18.04px] pt-[0.61px] pb-[0.43px] flex-col justify-start items-start flex">
                   <div className="justify-start items-start inline-flex">
                     <div className="text-[#76737b] text-sm font-normal leading-[16.80px] text-left">
                       Bug Bounty
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
-            <div className="flex-col justify-start items-start gap-4 inline-flex">
+            {/* <div className="flex-col justify-start items-start gap-4 inline-flex">
               <div className="h-[17px] flex-col justify-start items-start flex">
                 <div className="text-[#181822] text-sm font-semibold leading-[16.80px] text-left">
                   Company
@@ -238,7 +238,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
