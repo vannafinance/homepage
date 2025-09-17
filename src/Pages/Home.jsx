@@ -136,7 +136,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row gap-[26px] justify-center items-center content-center mt-3.5">
             <Button
               className="rounded-[8px] flex gap-2.5 bg-[#F2ECFE] p-3 px-4"
-              redirectTo="https://discord.gg/zwZGkNd3Fb"
+              redirectTo="https://discord.gg/MmK9rsWdzS"
             >
               <img src="/icons/discordLogo.svg" />
               <p className="text-base font-[600] text-primary">Join Discord</p>

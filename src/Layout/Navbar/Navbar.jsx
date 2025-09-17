@@ -16,8 +16,8 @@ const Navbar = () => {
 
   const developersMenu = [
     { name: "User Docs", link: "https://docs.vanna.finance/docs" },
-    { name: "Github", link: "https://github.com/vannafinance" },
-    { name: "Technical Docs", link: "" },
+    // { name: "Github", link: "https://github.com/vannafinance" },
+    { name: "Technical Docs", link: "https://docs.vanna.finance/tech" },
     { name: "Whitepaper", link: "https://docsend.com/v/4hxps/whitepaper" },
     { name: "Bug Bounty", link: "" },
   ];
@@ -36,6 +36,10 @@ const Navbar = () => {
     {
       name: "Telegram",
       link: "https://t.me/vannaprotocolann",
+      icon: "/icons/telegramLogo.svg",
+    },{
+      name: "Telegram Group",
+      link: "https://t.me/vannaprotocol",
       icon: "/icons/telegramLogo.svg",
     },
     // { name: "YouTube", link: "", icon: "/icons/youtubeLogo.svg" },
@@ -84,7 +88,7 @@ const Navbar = () => {
             id="nav-menu"
           >
             <ul className="nav__list">
-              <div className="relative inline-block">
+              {/* <div className="relative inline-block">
                 <li className="nav__item">
                   <NavLink
                     className="nav__link"
@@ -112,7 +116,7 @@ const Navbar = () => {
                     ))}
                   </div>
                 )}
-              </div>
+              </div> */}
               <div className="relative inline-block">
                 <li className="nav__item">
                   <NavLink
